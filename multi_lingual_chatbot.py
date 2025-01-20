@@ -1,7 +1,7 @@
-import google.generativeai as genai
+import google.generativeai as genai # for connecting to the Gemini API for generating responses.
 import streamlit as st
 import googletrans
-from googletrans import Translator
+from googletrans import Translator  #for translating text between languages.
 import toml
 
 # Load API key from config file
@@ -9,7 +9,7 @@ config = toml.load('config.toml')
 api_key = config['api_keys']['gemini']
 genai.configure(api_key=api_key)
 
-# Supported languages
+# Supported languages -  language codes based on the ISO 639-1 standard, which assigns two-letter abbreviations to each language. Helps in identifying the input and output languages during translation.
 supported_languages = {
     'en': 'English',
     'hi': 'Hindi',
@@ -44,6 +44,7 @@ translator = Translator()
 def translate_text(text, src_lang, dest_lang):
     """Translate text from source language to destination language."""
     try:
+        # Translate the given text from `src_lang` to `dest_lang`.
         translated = translator.translate(text, src=src_lang, dest=dest_lang)
         return translated.text
     except Exception as e:
@@ -112,9 +113,9 @@ def app():
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
-    # Input box for user query
+    # Input box for user questions
     if prompt := st.chat_input(" Ask anything in any Indian language, and BharatBot will respond in your chosen language."):
-        # Append user's message to session state
+        # Adding user's message to session state
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
@@ -129,7 +130,7 @@ def app():
                 translated_response = translate_text(response_in_english, 'en', output_lang_code)
                 st.markdown(translated_response)
 
-        # Append assistant's message to session state
+        # Adding assistant's message to session state
         st.session_state.messages.append({"role": "assistant", "content": translated_response})
 
 if __name__ == "__main__":
