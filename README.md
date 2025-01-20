@@ -40,6 +40,14 @@
 
 ---
 
+### 4. MultiLingual Chatbot
+
+| **Video**                                                                                                                     | **Description**                                                                                                                                               |
+|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [![Watch the video](https://img.youtube.com/vi/-eRnjiKiwxc/maxresdefault.jpg)](https://www.youtube.com/watch?v=-eRnjiKiwxc)   | BharatBot, a multilingual chatbot supporting over 25 Indian languages. Ask a question in your preferred language, and it will respond in the language you choose. |
+
+---
+
 Feel free to explore each type and experiment with different scenarios. Each chatbot is designed to demonstrate various approaches to building conversational agents.
 
 ---
