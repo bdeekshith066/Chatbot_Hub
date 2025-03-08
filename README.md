@@ -48,8 +48,56 @@
 
 ---
 
+### 5. RAG-Based Chatbot  
+
+| **Video**                                                                                                                     | **Description**                                                                                                                                               |  
+|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+| [![Watch the video](https://img.youtube.com/vi/iXf6SKf6PD4/maxresdefault.jpg)](https://www.youtube.com/watch?v=iXf6SKf6PD4)   | A Retrieval-Augmented Generation (RAG) chatbot that extracts precise information from PDFs. Upload a document and ask questions, receiving responses strictly based on the document’s content! |  
+
+---
+
+### 6. Data Analysis Chatbot  
+
+| **Video**                                                                                                                    | **Description**                                                                                                                                               |  
+|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+| [![Watch the video](https://img.youtube.com/vi/JBNtGdN3Nt8/hqdefault.jpg)](https://www.youtube.com/watch?v=JBNtGdN3Nt8)   | This chatbot analyzes datasets by generating visualizations, summary statistics, and insightful responses. Upload CSV or Excel files and get instant AI-powered analysis! |  
+
+
+### 7. Voice-to-Voice Chatbot  
+
+| **Video**                                                                                                                     | **Description**                                                                                                                                               |  
+|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+| [![Watch the video](https://img.youtube.com/vi/EnsLyP4Ns2Y/maxresdefault.jpg)](https://www.youtube.com/watch?v=EnsLyP4Ns2Y)   | Experience a fully voice-powered AI chatbot! Speak to it, and it responds back with voice, making conversations natural and interactive. Powered by Gemini API & speech recognition! |  
+
+---
+
 Feel free to explore each type and experiment with different scenarios. Each chatbot is designed to demonstrate various approaches to building conversational agents.
 
 ---
 
 Stay tuned for more chatbot types coming soon!
+
+
+## Installation and Setup
+
+Follow the steps below to set up and run the project:
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/bdeekshith066/Chatbot_Hub.git
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+
+```
+### 4. Run the Application
+```bash
+streamlit run main.py
+```
+
+## Contact  
+For queries or collaborations, feel free to reach out:  
+📧 Email: [bdeekshith6@gmail.com](mailto:bdeekshith6@gmail.com)  
+🔗 LinkedIn: [Deekshith](https://www.linkedin.com/in/deekshith2912/)  
