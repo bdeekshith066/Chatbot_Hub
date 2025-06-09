@@ -102,39 +102,9 @@ def app():
             st.subheader("Statistics Summary ")
             st.write(df.describe())
 
-    # Chatbot section
-    st.subheader(":orange[Chat with your Data]")
-    user_input = st.text_input("Ask a question about your dataset:")
+ 
+    
 
-    if user_input and uploaded_file is not None:
-        genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-1.5-pro-latest')
-        chat = model.start_chat()
-
-        def analyze_dataset_question(df, user_input):
-            prompt = f"""
-            Analyze the following dataset and answer the question:
-            {user_input}
-
-            Dataset:
-            {df.head(10).to_csv(index=False)}
-            """
-            full_response = ""
-            try:
-                for chunk in chat.send_message(prompt, stream=True):
-                    full_response += chunk.text
-            except genai.types.generation_types.BlockedPromptException as e:
-                st.error(f"Blocked Prompt: {e}")
-            except Exception as e:
-                st.error(f"An error occurred: {e}")
-            return full_response
-
-        if st.button("Get Analysis"):
-            st.spinner("Generating response...")
-            response = analyze_dataset_question(df, user_input)
-            if response:
-                st.write("Response:")
-                st.write(response)
-
+      
 if __name__ == "__main__":
     app()
